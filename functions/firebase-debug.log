@@ -1,0 +1,1062 @@
+[debug] [2025-07-04T13:40:31.974Z] ----------------------------------------------------------------------
+[debug] [2025-07-04T13:40:31.980Z] Command:       /opt/homebrew/Cellar/node/23.7.0/bin/node /opt/homebrew/bin/firebase emulators:start --only functions
+[debug] [2025-07-04T13:40:31.980Z] CLI Version:   14.9.0
+[debug] [2025-07-04T13:40:31.980Z] Platform:      darwin
+[debug] [2025-07-04T13:40:31.980Z] Node Version:  v23.7.0
+[debug] [2025-07-04T13:40:31.980Z] Time:          Fri Jul 04 2025 19:10:31 GMT+0530 (India Standard Time)
+[debug] [2025-07-04T13:40:31.980Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-04T13:40:32.175Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-04T13:40:32.176Z] > authorizing via signed-in user (harshdeshmukh0905@gmail.com)
+[debug] [2025-07-04T13:40:32.180Z] Checked if tokens are valid: false, expires at: 1751620956809
+[debug] [2025-07-04T13:40:32.180Z] Checked if tokens are valid: false, expires at: 1751620956809
+[debug] [2025-07-04T13:40:32.180Z] > refreshing access token with scopes: []
+[debug] [2025-07-04T13:40:32.181Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-07-04T13:40:32.181Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-07-04T13:40:32.327Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-07-04T13:40:32.328Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-07-04T13:40:32.344Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/109565199399/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2025-07-04T13:40:32.344Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/109565199399/services/cloudresourcemanager.googleapis.com x-goog-quota-user=projects/109565199399
+[debug] [2025-07-04T13:40:34.198Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/109565199399/services/cloudresourcemanager.googleapis.com 200
+[debug] [2025-07-04T13:40:34.198Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/109565199399/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2025-07-04T13:40:34.207Z] Checked if tokens are valid: true, expires at: 1751640031328
+[debug] [2025-07-04T13:40:34.207Z] Checked if tokens are valid: true, expires at: 1751640031328
+[debug] [2025-07-04T13:40:34.207Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/109565199399 [none]
+[debug] [2025-07-04T13:40:35.676Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/109565199399 200
+[debug] [2025-07-04T13:40:35.677Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/109565199399 {"projectNumber":"109565199399","projectId":"ui-generator-d7f03","lifecycleState":"ACTIVE","name":"UI-Generator","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-07-04T13:34:31.039739Z"}
+[debug] [2025-07-04T13:40:35.680Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-04T13:40:35.681Z] > authorizing via signed-in user (harshdeshmukh0905@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2025-07-04T13:40:35.878Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T13:40:35.878Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-07-04T13:40:35.893Z] [hub] writing locator at /var/folders/k3/kn8cxctn3592nvqqx1qj9lmc0000gn/T/hub-ui-generator-d7f03.json
+[debug] [2025-07-04T13:40:36.040Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T13:40:36.040Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T13:40:36.040Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-04T13:40:36.040Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2025-07-04T13:40:36.065Z] defaultcredentials: writing to file /Users/harshdeshmukh/.config/firebase/harshdeshmukh0905_gmail_com_application_default_credentials.json
+[debug] [2025-07-04T13:40:36.067Z] Setting GAC to /Users/harshdeshmukh/.config/firebase/harshdeshmukh0905_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/harshdeshmukh/.config/firebase/harshdeshmukh0905_gmail_com_application_default_credentials.json"}}
+[debug] [2025-07-04T13:40:36.067Z] Checked if tokens are valid: true, expires at: 1751640031328
+[debug] [2025-07-04T13:40:36.067Z] Checked if tokens are valid: true, expires at: 1751640031328
+[debug] [2025-07-04T13:40:36.067Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ui-generator-d7f03/adminSdkConfig [none]
+[debug] [2025-07-04T13:40:36.663Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ui-generator-d7f03/adminSdkConfig 200
+[debug] [2025-07-04T13:40:36.663Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ui-generator-d7f03/adminSdkConfig {"projectId":"ui-generator-d7f03","storageBucket":"ui-generator-d7f03.firebasestorage.app"}
+[info] i  ui: downloading ui-v1.15.0.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.15.0.zip..."}}
+[debug] [2025-07-04T13:40:36.693Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.15.0.zip 
+[debug] [2025-07-04T13:40:37.019Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.15.0.zip 200
+[debug] [2025-07-04T13:40:37.019Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.15.0.zip [stream]
+[debug] [2025-07-04T13:40:37.429Z] Data is 3538469
+[debug] [2025-07-04T13:40:37.429Z] [unzip] Entry: client/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2025-07-04T13:40:37.429Z] [unzip] Processing entry: client/
+[debug] [2025-07-04T13:40:37.429Z] [unzip] mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/
+[debug] [2025-07-04T13:40:37.430Z] [unzip] Entry: client/favicon-16x16.png (compressed_size=293 bytes, uncompressed_size=293 bytes)
+[debug] [2025-07-04T13:40:37.430Z] [unzip] Processing entry: client/favicon-16x16.png
+[debug] [2025-07-04T13:40:37.430Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2025-07-04T13:40:37.430Z] [unzip] Writing file: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/favicon-16x16.png
+[debug] [2025-07-04T13:40:37.430Z] [unzip] Entry: client/safari-pinned-tab.svg (compressed_size=1433 bytes, uncompressed_size=2611 bytes)
+[debug] [2025-07-04T13:40:37.430Z] [unzip] Processing entry: client/safari-pinned-tab.svg
+[debug] [2025-07-04T13:40:37.430Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2025-07-04T13:40:37.431Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/safari-pinned-tab.svg
+[debug] [2025-07-04T13:40:37.432Z] [unzip] Entry: client/favicon.ico (compressed_size=2933 bytes, uncompressed_size=13294 bytes)
+[debug] [2025-07-04T13:40:37.433Z] [unzip] Processing entry: client/favicon.ico
+[debug] [2025-07-04T13:40:37.433Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2025-07-04T13:40:37.433Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/favicon.ico
+[debug] [2025-07-04T13:40:37.433Z] [unzip] Entry: client/index.html (compressed_size=1364 bytes, uncompressed_size=3071 bytes)
+[debug] [2025-07-04T13:40:37.433Z] [unzip] Processing entry: client/index.html
+[debug] [2025-07-04T13:40:37.433Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2025-07-04T13:40:37.434Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/index.html
+[debug] [2025-07-04T13:40:37.434Z] [unzip] Entry: client/android-chrome-192x192.png (compressed_size=2684 bytes, uncompressed_size=2684 bytes)
+[debug] [2025-07-04T13:40:37.434Z] [unzip] Processing entry: client/android-chrome-192x192.png
+[debug] [2025-07-04T13:40:37.434Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2025-07-04T13:40:37.434Z] [unzip] Writing file: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/android-chrome-192x192.png
+[debug] [2025-07-04T13:40:37.434Z] [unzip] Entry: client/apple-touch-icon.png (compressed_size=2123 bytes, uncompressed_size=2152 bytes)
+[debug] [2025-07-04T13:40:37.434Z] [unzip] Processing entry: client/apple-touch-icon.png
+[debug] [2025-07-04T13:40:37.434Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2025-07-04T13:40:37.434Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/apple-touch-icon.png
+[debug] [2025-07-04T13:40:37.435Z] [unzip] Entry: client/android-chrome-512x512.png (compressed_size=5369 bytes, uncompressed_size=5411 bytes)
+[debug] [2025-07-04T13:40:37.435Z] [unzip] Processing entry: client/android-chrome-512x512.png
+[debug] [2025-07-04T13:40:37.435Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2025-07-04T13:40:37.435Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/android-chrome-512x512.png
+[debug] [2025-07-04T13:40:37.436Z] [unzip] Entry: client/manifest.json (compressed_size=245 bytes, uncompressed_size=551 bytes)
+[debug] [2025-07-04T13:40:37.436Z] [unzip] Processing entry: client/manifest.json
+[debug] [2025-07-04T13:40:37.436Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2025-07-04T13:40:37.436Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/manifest.json
+[debug] [2025-07-04T13:40:37.437Z] [unzip] Entry: client/robots.txt (compressed_size=26 bytes, uncompressed_size=26 bytes)
+[debug] [2025-07-04T13:40:37.437Z] [unzip] Processing entry: client/robots.txt
+[debug] [2025-07-04T13:40:37.437Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2025-07-04T13:40:37.437Z] [unzip] Writing file: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/robots.txt
+[debug] [2025-07-04T13:40:37.437Z] [unzip] Entry: client/mstile-150x150.png (compressed_size=2034 bytes, uncompressed_size=2034 bytes)
+[debug] [2025-07-04T13:40:37.437Z] [unzip] Processing entry: client/mstile-150x150.png
+[debug] [2025-07-04T13:40:37.437Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2025-07-04T13:40:37.437Z] [unzip] Writing file: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/mstile-150x150.png
+[debug] [2025-07-04T13:40:37.437Z] [unzip] Entry: client/assets/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2025-07-04T13:40:37.437Z] [unzip] Processing entry: client/assets/
+[debug] [2025-07-04T13:40:37.437Z] [unzip] mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/
+[debug] [2025-07-04T13:40:37.438Z] [unzip] Entry: client/assets/index-BX-A56oj.js (compressed_size=582089 bytes, uncompressed_size=2092775 bytes)
+[debug] [2025-07-04T13:40:37.438Z] [unzip] Processing entry: client/assets/index-BX-A56oj.js
+[debug] [2025-07-04T13:40:37.438Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets
+[debug] [2025-07-04T13:40:37.438Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/index-BX-A56oj.js
+[debug] [2025-07-04T13:40:37.450Z] [unzip] Entry: client/assets/index-CjB9C900.css (compressed_size=35979 bytes, uncompressed_size=298654 bytes)
+[debug] [2025-07-04T13:40:37.450Z] [unzip] Processing entry: client/assets/index-CjB9C900.css
+[debug] [2025-07-04T13:40:37.450Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets
+[debug] [2025-07-04T13:40:37.450Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/index-CjB9C900.css
+[debug] [2025-07-04T13:40:37.453Z] [unzip] Entry: client/assets/index-BX-A56oj.js.map (compressed_size=2362482 bytes, uncompressed_size=10036679 bytes)
+[debug] [2025-07-04T13:40:37.453Z] [unzip] Processing entry: client/assets/index-BX-A56oj.js.map
+[debug] [2025-07-04T13:40:37.453Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets
+[debug] [2025-07-04T13:40:37.453Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/index-BX-A56oj.js.map
+[debug] [2025-07-04T13:40:37.537Z] [unzip] Entry: client/assets/extensions/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2025-07-04T13:40:37.537Z] [unzip] Processing entry: client/assets/extensions/
+[debug] [2025-07-04T13:40:37.537Z] [unzip] mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/extensions/
+[debug] [2025-07-04T13:40:37.537Z] [unzip] Entry: client/assets/extensions/default-extension.png (compressed_size=1646 bytes, uncompressed_size=1657 bytes)
+[debug] [2025-07-04T13:40:37.537Z] [unzip] Processing entry: client/assets/extensions/default-extension.png
+[debug] [2025-07-04T13:40:37.537Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/extensions
+[debug] [2025-07-04T13:40:37.537Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/extensions/default-extension.png
+[debug] [2025-07-04T13:40:37.538Z] [unzip] Entry: client/assets/img/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2025-07-04T13:40:37.538Z] [unzip] Processing entry: client/assets/img/
+[debug] [2025-07-04T13:40:37.538Z] [unzip] mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/img/
+[debug] [2025-07-04T13:40:37.538Z] [unzip] Entry: client/assets/img/database.png (compressed_size=29449 bytes, uncompressed_size=29988 bytes)
+[debug] [2025-07-04T13:40:37.538Z] [unzip] Processing entry: client/assets/img/database.png
+[debug] [2025-07-04T13:40:37.538Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/img
+[debug] [2025-07-04T13:40:37.538Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/img/database.png
+[debug] [2025-07-04T13:40:37.538Z] [unzip] Entry: client/assets/provider-icons/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2025-07-04T13:40:37.538Z] [unzip] Processing entry: client/assets/provider-icons/
+[debug] [2025-07-04T13:40:37.538Z] [unzip] mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/
+[debug] [2025-07-04T13:40:37.538Z] [unzip] Entry: client/assets/provider-icons/auth_service_saml.svg (compressed_size=575 bytes, uncompressed_size=1226 bytes)
+[debug] [2025-07-04T13:40:37.539Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_saml.svg
+[debug] [2025-07-04T13:40:37.539Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2025-07-04T13:40:37.539Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_saml.svg
+[debug] [2025-07-04T13:40:37.539Z] [unzip] Entry: client/assets/provider-icons/auth_service_phone.svg (compressed_size=261 bytes, uncompressed_size=414 bytes)
+[debug] [2025-07-04T13:40:37.539Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_phone.svg
+[debug] [2025-07-04T13:40:37.539Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2025-07-04T13:40:37.539Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_phone.svg
+[debug] [2025-07-04T13:40:37.539Z] [unzip] Entry: client/assets/provider-icons/auth_service_facebook.svg (compressed_size=289 bytes, uncompressed_size=457 bytes)
+[debug] [2025-07-04T13:40:37.539Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_facebook.svg
+[debug] [2025-07-04T13:40:37.539Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2025-07-04T13:40:37.539Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_facebook.svg
+[debug] [2025-07-04T13:40:37.540Z] [unzip] Entry: client/assets/provider-icons/auth_service_game_center.svg (compressed_size=991 bytes, uncompressed_size=3921 bytes)
+[debug] [2025-07-04T13:40:37.540Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_game_center.svg
+[debug] [2025-07-04T13:40:37.540Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2025-07-04T13:40:37.540Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_game_center.svg
+[debug] [2025-07-04T13:40:37.540Z] [unzip] Entry: client/assets/provider-icons/auth_service_apple.svg (compressed_size=230 bytes, uncompressed_size=334 bytes)
+[debug] [2025-07-04T13:40:37.540Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_apple.svg
+[debug] [2025-07-04T13:40:37.540Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2025-07-04T13:40:37.540Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_apple.svg
+[debug] [2025-07-04T13:40:37.540Z] [unzip] Entry: client/assets/provider-icons/auth_service_github.svg (compressed_size=466 bytes, uncompressed_size=838 bytes)
+[debug] [2025-07-04T13:40:37.540Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_github.svg
+[debug] [2025-07-04T13:40:37.540Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2025-07-04T13:40:37.540Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_github.svg
+[debug] [2025-07-04T13:40:37.541Z] [unzip] Entry: client/assets/provider-icons/auth_service_mslive.svg (compressed_size=203 bytes, uncompressed_size=378 bytes)
+[debug] [2025-07-04T13:40:37.541Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_mslive.svg
+[debug] [2025-07-04T13:40:37.541Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2025-07-04T13:40:37.541Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_mslive.svg
+[debug] [2025-07-04T13:40:37.541Z] [unzip] Entry: client/assets/provider-icons/auth_service_yahoo.svg (compressed_size=577 bytes, uncompressed_size=1182 bytes)
+[debug] [2025-07-04T13:40:37.541Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_yahoo.svg
+[debug] [2025-07-04T13:40:37.541Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2025-07-04T13:40:37.541Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_yahoo.svg
+[debug] [2025-07-04T13:40:37.541Z] [unzip] Entry: client/assets/provider-icons/auth_service_twitter.svg (compressed_size=444 bytes, uncompressed_size=751 bytes)
+[debug] [2025-07-04T13:40:37.541Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_twitter.svg
+[debug] [2025-07-04T13:40:37.541Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2025-07-04T13:40:37.541Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_twitter.svg
+[debug] [2025-07-04T13:40:37.542Z] [unzip] Entry: client/assets/provider-icons/auth_service_play_games.svg (compressed_size=565 bytes, uncompressed_size=1173 bytes)
+[debug] [2025-07-04T13:40:37.542Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_play_games.svg
+[debug] [2025-07-04T13:40:37.542Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2025-07-04T13:40:37.542Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_play_games.svg
+[debug] [2025-07-04T13:40:37.542Z] [unzip] Entry: client/assets/provider-icons/auth_service_email.svg (compressed_size=228 bytes, uncompressed_size=326 bytes)
+[debug] [2025-07-04T13:40:37.542Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_email.svg
+[debug] [2025-07-04T13:40:37.542Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2025-07-04T13:40:37.542Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_email.svg
+[debug] [2025-07-04T13:40:37.542Z] [unzip] Entry: client/assets/provider-icons/auth_service_google.svg (compressed_size=409 bytes, uncompressed_size=720 bytes)
+[debug] [2025-07-04T13:40:37.542Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_google.svg
+[debug] [2025-07-04T13:40:37.542Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2025-07-04T13:40:37.542Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_google.svg
+[debug] [2025-07-04T13:40:37.542Z] [unzip] Entry: client/assets/provider-icons/auth_service_oidc.svg (compressed_size=414 bytes, uncompressed_size=858 bytes)
+[debug] [2025-07-04T13:40:37.543Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_oidc.svg
+[debug] [2025-07-04T13:40:37.543Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons
+[debug] [2025-07-04T13:40:37.543Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/assets/provider-icons/auth_service_oidc.svg
+[debug] [2025-07-04T13:40:37.543Z] [unzip] Entry: client/browserconfig.xml (compressed_size=491 bytes, uncompressed_size=822 bytes)
+[debug] [2025-07-04T13:40:37.543Z] [unzip] Processing entry: client/browserconfig.xml
+[debug] [2025-07-04T13:40:37.543Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2025-07-04T13:40:37.543Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/browserconfig.xml
+[debug] [2025-07-04T13:40:37.543Z] [unzip] Entry: client/favicon-32x32.png (compressed_size=475 bytes, uncompressed_size=475 bytes)
+[debug] [2025-07-04T13:40:37.543Z] [unzip] Processing entry: client/favicon-32x32.png
+[debug] [2025-07-04T13:40:37.543Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client
+[debug] [2025-07-04T13:40:37.543Z] [unzip] Writing file: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/client/favicon-32x32.png
+[debug] [2025-07-04T13:40:37.543Z] [unzip] Entry: server/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2025-07-04T13:40:37.543Z] [unzip] Processing entry: server/
+[debug] [2025-07-04T13:40:37.543Z] [unzip] mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/server/
+[debug] [2025-07-04T13:40:37.543Z] [unzip] Entry: server/server.mjs.map (compressed_size=217845 bytes, uncompressed_size=944978 bytes)
+[debug] [2025-07-04T13:40:37.543Z] [unzip] Processing entry: server/server.mjs.map
+[debug] [2025-07-04T13:40:37.543Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/server
+[debug] [2025-07-04T13:40:37.543Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/server/server.mjs.map
+[debug] [2025-07-04T13:40:37.550Z] [unzip] Entry: server/server.mjs (compressed_size=276407 bytes, uncompressed_size=933701 bytes)
+[debug] [2025-07-04T13:40:37.550Z] [unzip] Processing entry: server/server.mjs
+[debug] [2025-07-04T13:40:37.550Z] [unzip] else mkdir: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/server
+[debug] [2025-07-04T13:40:37.550Z] [unzip] deflating: /Users/harshdeshmukh/.cache/firebase/emulators/ui-v1.15.0/server/server.mjs
+[info] i  functions: Watching "/Users/harshdeshmukh/Downloads/ui-generator/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/harshdeshmukh/Downloads/ui-generator/functions\" for Cloud Functions..."}}
+[debug] [2025-07-04T13:40:37.561Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-07-04T13:40:38.151Z] > [functions] package.json contents: {
+  "name": "functions",
+  "dependencies": {
+    "@google/generative-ai": "^0.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-functions": "^4.0.0"
+  },
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2025-07-04T13:40:38.152Z] Building nodejs source
+[debug] [2025-07-04T13:40:38.152Z] Failed to find version of module node: reached end of search path /Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "23". Using node@23 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-07-04T13:40:38.153Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-04T13:40:38.156Z] Found firebase-functions binary at '/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8762
+
+[debug] [2025-07-04T13:40:38.638Z] Got response from /__/functions.yaml {"endpoints":{"generateUI":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"generateUI"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: generateUI. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateUI."}}
+[info] ✔  functions[us-central1-generateUI]: http function initialized (http://127.0.0.1:5001/ui-generator-d7f03/us-central1/generateUI). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/ui-generator-d7f03/us-central1/generateUI)."}}
+[debug] [2025-07-04T13:40:42.669Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2025-07-04T13:50:53.206Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T13:50:53.204Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T13:50:53.207Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T13:50:53.204Z"],"workRunningCount":1}
+[debug] [2025-07-04T13:50:53.208Z] Accepted request OPTIONS /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T13:50:53.239Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T13:50:53.240Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T13:50:53.252Z] [worker-pool] addWorker(us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-generateUI)"}}
+[debug] [2025-07-04T13:50:53.253Z] [worker-pool] Adding worker with key us-central1-generateUI, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-generateUI, total=1"}}
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be installed as a dependency. To fix this, run "npm install --save firebase-admin" in your functions directory. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"The Cloud Functions emulator requires the module \"firebase-admin\" to be installed as a dependency. To fix this, run \"npm install --save firebase-admin\" in your functions directory."}}
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Your functions could not be parsed due to an issue with your node_modules (see above)"}}
+[debug] [2025-07-04T13:50:54.456Z] [runtime-status] [33029] Functions runtime initialized. {"cwd":"/Users/harshdeshmukh/Downloads/ui-generator/functions","node_version":"23.7.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[runtime-status] [33029] Functions runtime initialized. {\"cwd\":\"/Users/harshdeshmukh/Downloads/ui-generator/functions\",\"node_version\":\"23.7.0\"}"}}
+[debug] [2025-07-04T13:50:54.456Z] [runtime-status] [33029] Listening to port: /var/folders/k3/kn8cxctn3592nvqqx1qj9lmc0000gn/T/fire_emu_26e84157d3cdb406.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[runtime-status] [33029] Listening to port: /var/folders/k3/kn8cxctn3592nvqqx1qj9lmc0000gn/T/fire_emu_26e84157d3cdb406.sock"}}
+[debug] [2025-07-04T13:50:54.475Z] [worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: IDLE"}}
+[debug] [2025-07-04T13:50:54.475Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T13:50:54.477Z] [worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: BUSY"}}
+[debug] [2025-07-04T13:50:54.479Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 2.513792ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 2.513792ms"}}
+[debug] [2025-07-04T13:50:54.480Z] [worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: IDLE"}}
+[debug] [2025-07-04T13:50:54.480Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T13:50:54.480Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T13:50:54.480Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T13:50:54.482Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T13:50:54.482Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T13:50:54.482Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T13:50:54.482Z"],"workRunningCount":1}
+[debug] [2025-07-04T13:50:54.482Z] Accepted request POST /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T13:50:54.483Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T13:50:54.483Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T13:50:54.483Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T13:50:54.483Z] [worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: BUSY"}}
+[info] >  Error: GoogleGenerativeAIError: [404 Not Found] models/gemini-pro is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. {"user":"Error: GoogleGenerativeAIError: [404 Not Found] models/gemini-pro is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m Error: GoogleGenerativeAIError: [404 Not Found] models/gemini-pro is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."}}
+[info] >      at _makeRequestInternal (/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/@google/generative-ai/dist/index.js:303:19) {"user":"    at _makeRequestInternal (/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/@google/generative-ai/dist/index.js:303:19)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at _makeRequestInternal (/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/@google/generative-ai/dist/index.js:303:19)"}}
+[info] >      at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {"user":"    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"}}
+[info] >      at async generateContent (/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/@google/generative-ai/dist/index.js:692:22) {"user":"    at async generateContent (/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/@google/generative-ai/dist/index.js:692:22)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at async generateContent (/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/@google/generative-ai/dist/index.js:692:22)"}}
+[info] >      at async generateUI (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:32:18) {"user":"    at async generateUI (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:32:18)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at async generateUI (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:32:18)"}}
+[info] >      at async /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:40:22 {"user":"    at async /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:40:22","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at async /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:40:22"}}
+[debug] [2025-07-04T13:50:57.048Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 2565.361833ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 2565.361833ms"}}
+[debug] [2025-07-04T13:50:57.049Z] [worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: IDLE"}}
+[debug] [2025-07-04T13:50:57.049Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T13:50:57.049Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T13:50:57.049Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T13:56:33.495Z] File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers"}}
+[debug] [2025-07-04T13:56:34.507Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-07-04T13:56:35.499Z] > [functions] package.json contents: {
+  "name": "functions",
+  "dependencies": {
+    "@google/generative-ai": "^0.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-functions": "^4.0.0"
+  },
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2025-07-04T13:56:35.499Z] Building nodejs source
+[debug] [2025-07-04T13:56:35.500Z] Failed to find version of module node: reached end of search path /Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "23". Using node@23 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-07-04T13:56:35.503Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-04T13:56:35.505Z] Found firebase-functions binary at '/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8226
+
+[debug] [2025-07-04T13:56:35.988Z] Got response from /__/functions.yaml {"endpoints":{"generateUI":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"generateUI"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: generateUI. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateUI."}}
+[debug] [2025-07-04T13:56:40.009Z] [worker-pool] Shutting down IDLE worker (us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-generateUI)"}}
+[debug] [2025-07-04T13:56:40.009Z] [worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: FINISHING"}}
+[debug] [2025-07-04T13:56:40.020Z] [worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: exited"}}
+[debug] [2025-07-04T13:56:40.020Z] [worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-6b662caf-a236-4f16-81ca-acbc59b55054]: FINISHED"}}
+[debug] [2025-07-04T13:56:40.250Z] File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers"}}
+[debug] [2025-07-04T13:56:41.251Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-07-04T13:56:41.986Z] > [functions] package.json contents: {
+  "name": "functions",
+  "dependencies": {
+    "@google/generative-ai": "^0.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-functions": "^4.0.0"
+  },
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2025-07-04T13:56:41.986Z] Building nodejs source
+[debug] [2025-07-04T13:56:41.986Z] Failed to find version of module node: reached end of search path /Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "23". Using node@23 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-07-04T13:56:41.987Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-04T13:56:41.989Z] Found firebase-functions binary at '/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8373
+
+[debug] [2025-07-04T13:56:42.356Z] Got response from /__/functions.yaml {"endpoints":{"generateUI":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"generateUI"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: generateUI. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateUI."}}
+[debug] [2025-07-04T13:56:49.059Z] File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers"}}
+[debug] [2025-07-04T13:56:50.061Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-07-04T13:56:50.737Z] > [functions] package.json contents: {
+  "name": "functions",
+  "dependencies": {
+    "@google/generative-ai": "^0.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-functions": "^4.0.0"
+  },
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2025-07-04T13:56:50.737Z] Building nodejs source
+[debug] [2025-07-04T13:56:50.737Z] Failed to find version of module node: reached end of search path /Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "23". Using node@23 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-07-04T13:56:50.738Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-04T13:56:50.739Z] Found firebase-functions binary at '/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8061
+
+[debug] [2025-07-04T13:56:51.073Z] Got response from /__/functions.yaml {"endpoints":{"generateUI":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"generateUI"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[error] /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53
+  const models = await genAI.listModels();
+                             ^
+
+TypeError: genAI.listModels is not a function
+    at listModels (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53:30)
+    at Object.<anonymous> (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:57:1)
+    at Module._compile (node:internal/modules/cjs/loader:1723:14)
+    at Object..js (node:internal/modules/cjs/loader:1888:10)
+    at Module.load (node:internal/modules/cjs/loader:1458:32)
+    at Function._load (node:internal/modules/cjs/loader:1275:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:234:24)
+    at Module.require (node:internal/modules/cjs/loader:1480:12)
+    at require (node:internal/modules/helpers:135:16)
+
+Node.js v23.7.0
+
+[debug] [2025-07-04T13:56:51.076Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8061/__/quitquitquit failed, reason: read ECONNRESET {"message":"request to http://localhost:8061/__/quitquitquit failed, reason: read ECONNRESET","type":"system","errno":"ECONNRESET","code":"ECONNRESET"}
+[info] ✔  functions: Loaded functions definitions from source: generateUI. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateUI."}}
+[debug] [2025-07-04T13:56:55.076Z] File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers"}}
+[debug] [2025-07-04T13:56:56.078Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-07-04T13:56:56.720Z] > [functions] package.json contents: {
+  "name": "functions",
+  "dependencies": {
+    "@google/generative-ai": "^0.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-functions": "^4.0.0"
+  },
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2025-07-04T13:56:56.720Z] Building nodejs source
+[debug] [2025-07-04T13:56:56.720Z] Failed to find version of module node: reached end of search path /Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "23". Using node@23 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-07-04T13:56:56.721Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-04T13:56:56.722Z] Found firebase-functions binary at '/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8239
+
+[debug] [2025-07-04T13:56:57.050Z] Got response from /__/functions.yaml {"endpoints":{"generateUI":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"generateUI"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[error] /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53
+  const models = await genAI.listModels();
+                             ^
+
+TypeError: genAI.listModels is not a function
+    at listModels (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53:30)
+    at Object.<anonymous> (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:57:1)
+    at Module._compile (node:internal/modules/cjs/loader:1723:14)
+    at Object..js (node:internal/modules/cjs/loader:1888:10)
+    at Module.load (node:internal/modules/cjs/loader:1458:32)
+    at Function._load (node:internal/modules/cjs/loader:1275:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:234:24)
+    at Module.require (node:internal/modules/cjs/loader:1480:12)
+    at require (node:internal/modules/helpers:135:16)
+
+Node.js v23.7.0
+
+[debug] [2025-07-04T13:56:57.052Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8239/__/quitquitquit failed, reason: read ECONNRESET {"message":"request to http://localhost:8239/__/quitquitquit failed, reason: read ECONNRESET","type":"system","errno":"ECONNRESET","code":"ECONNRESET"}
+[info] ✔  functions: Loaded functions definitions from source: generateUI. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateUI."}}
+[debug] [2025-07-04T13:57:09.551Z] File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers"}}
+[debug] [2025-07-04T13:57:10.560Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-07-04T13:57:11.169Z] > [functions] package.json contents: {
+  "name": "functions",
+  "dependencies": {
+    "@google/generative-ai": "^0.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-functions": "^4.0.0"
+  },
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2025-07-04T13:57:11.169Z] Building nodejs source
+[debug] [2025-07-04T13:57:11.169Z] Failed to find version of module node: reached end of search path /Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "23". Using node@23 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-07-04T13:57:11.170Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-04T13:57:11.171Z] Found firebase-functions binary at '/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8302
+
+[debug] [2025-07-04T13:57:11.549Z] Got response from /__/functions.yaml {"endpoints":{"generateUI":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"generateUI"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[error] /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53
+  const models = await genAI.listModels();
+                             ^
+
+TypeError: genAI.listModels is not a function
+    at listModels (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53:30)
+    at Object.<anonymous> (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:57:1)
+    at Module._compile (node:internal/modules/cjs/loader:1723:14)
+    at Object..js (node:internal/modules/cjs/loader:1888:10)
+    at Module.load (node:internal/modules/cjs/loader:1458:32)
+    at Function._load (node:internal/modules/cjs/loader:1275:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:234:24)
+    at Module.require (node:internal/modules/cjs/loader:1480:12)
+    at require (node:internal/modules/helpers:135:16)
+
+Node.js v23.7.0
+
+[debug] [2025-07-04T13:57:11.552Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8302/__/quitquitquit failed, reason: read ECONNRESET {"message":"request to http://localhost:8302/__/quitquitquit failed, reason: read ECONNRESET","type":"system","errno":"ECONNRESET","code":"ECONNRESET"}
+[info] ✔  functions: Loaded functions definitions from source: generateUI. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateUI."}}
+[debug] [2025-07-04T13:57:16.741Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T13:57:16.740Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T13:57:16.742Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T13:57:16.740Z"],"workRunningCount":1}
+[debug] [2025-07-04T13:57:16.742Z] Accepted request OPTIONS /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T13:57:16.750Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T13:57:16.754Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T13:57:16.755Z] [worker-pool] Cleaned up workers for us-central1-generateUI: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-generateUI: 1 --> 0"}}
+[debug] [2025-07-04T13:57:16.762Z] [worker-pool] addWorker(us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-generateUI)"}}
+[debug] [2025-07-04T13:57:16.763Z] [worker-pool] Adding worker with key us-central1-generateUI, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-generateUI, total=1"}}
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be installed as a dependency. To fix this, run "npm install --save firebase-admin" in your functions directory. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"The Cloud Functions emulator requires the module \"firebase-admin\" to be installed as a dependency. To fix this, run \"npm install --save firebase-admin\" in your functions directory."}}
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Your functions could not be parsed due to an issue with your node_modules (see above)"}}
+[debug] [2025-07-04T13:57:17.732Z] [runtime-status] [33117] Functions runtime initialized. {"cwd":"/Users/harshdeshmukh/Downloads/ui-generator/functions","node_version":"23.7.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[runtime-status] [33117] Functions runtime initialized. {\"cwd\":\"/Users/harshdeshmukh/Downloads/ui-generator/functions\",\"node_version\":\"23.7.0\"}"}}
+[debug] [2025-07-04T13:57:17.733Z] [runtime-status] [33117] Listening to port: /var/folders/k3/kn8cxctn3592nvqqx1qj9lmc0000gn/T/fire_emu_a4563e214bbf0786.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[runtime-status] [33117] Listening to port: /var/folders/k3/kn8cxctn3592nvqqx1qj9lmc0000gn/T/fire_emu_a4563e214bbf0786.sock"}}
+[info] >  /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53 {"user":"/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53"}}
+[info] >    const models = await genAI.listModels(); {"user":"  const models = await genAI.listModels();","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m   const models = await genAI.listModels();"}}
+[info] >                               ^ {"user":"                             ^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m                              ^"}}
+[info] >   {"user":"","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m "}}
+[info] >  TypeError: genAI.listModels is not a function {"user":"TypeError: genAI.listModels is not a function","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m TypeError: genAI.listModels is not a function"}}
+[info] >      at listModels (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53:30) {"user":"    at listModels (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53:30)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at listModels (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53:30)"}}
+[info] >      at Object.<anonymous> (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:57:1) {"user":"    at Object.<anonymous> (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:57:1)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Object.<anonymous> (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:57:1)"}}
+[info] >      at Module._compile (node:internal/modules/cjs/loader:1723:14) {"user":"    at Module._compile (node:internal/modules/cjs/loader:1723:14)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Module._compile (node:internal/modules/cjs/loader:1723:14)"}}
+[info] >      at Object..js (node:internal/modules/cjs/loader:1888:10) {"user":"    at Object..js (node:internal/modules/cjs/loader:1888:10)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Object..js (node:internal/modules/cjs/loader:1888:10)"}}
+[info] >      at Module.load (node:internal/modules/cjs/loader:1458:32) {"user":"    at Module.load (node:internal/modules/cjs/loader:1458:32)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Module.load (node:internal/modules/cjs/loader:1458:32)"}}
+[info] >      at Function._load (node:internal/modules/cjs/loader:1275:12) {"user":"    at Function._load (node:internal/modules/cjs/loader:1275:12)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Function._load (node:internal/modules/cjs/loader:1275:12)"}}
+[info] >      at TracingChannel.traceSync (node:diagnostics_channel:322:14) {"user":"    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at TracingChannel.traceSync (node:diagnostics_channel:322:14)"}}
+[info] >      at wrapModuleLoad (node:internal/modules/cjs/loader:234:24) {"user":"    at wrapModuleLoad (node:internal/modules/cjs/loader:234:24)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at wrapModuleLoad (node:internal/modules/cjs/loader:234:24)"}}
+[info] >      at Module.require (node:internal/modules/cjs/loader:1480:12) {"user":"    at Module.require (node:internal/modules/cjs/loader:1480:12)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Module.require (node:internal/modules/cjs/loader:1480:12)"}}
+[info] >      at require (node:internal/modules/helpers:135:16) {"user":"    at require (node:internal/modules/helpers:135:16)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at require (node:internal/modules/helpers:135:16)"}}
+[info] >   {"user":"","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m "}}
+[info] >  Node.js v23.7.0 {"user":"Node.js v23.7.0","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m Node.js v23.7.0"}}
+[debug] [2025-07-04T13:57:17.737Z] [worker-us-central1-generateUI-584536c6-d288-4747-ae77-b7fa83d02f36]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-584536c6-d288-4747-ae77-b7fa83d02f36]: exited"}}
+[debug] [2025-07-04T13:57:17.737Z] [worker-us-central1-generateUI-584536c6-d288-4747-ae77-b7fa83d02f36]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-584536c6-d288-4747-ae77-b7fa83d02f36]: FINISHED"}}
+[error] ⬢  functions: Failed to handle request for function us-central1-generateUI {"metadata":{"emulator":{"name":"functions"},"message":"Failed to handle request for function us-central1-generateUI"}}
+[error] ⬢  functions: Failed to start functions in /Users/harshdeshmukh/Downloads/ui-generator/functions: FirebaseError: Failed to load function. {"metadata":{"emulator":{"name":"functions"},"message":"Failed to start functions in /Users/harshdeshmukh/Downloads/ui-generator/functions: FirebaseError: Failed to load function."}}
+[debug] [2025-07-04T13:57:46.850Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T13:58:05.596Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T13:58:05.595Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T13:58:05.598Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T13:58:05.595Z"],"workRunningCount":1}
+[debug] [2025-07-04T13:58:05.598Z] Accepted request OPTIONS /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T13:58:05.604Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T13:58:05.604Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T13:58:05.605Z] [worker-pool] Cleaned up workers for us-central1-generateUI: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-generateUI: 1 --> 0"}}
+[debug] [2025-07-04T13:58:05.611Z] [worker-pool] addWorker(us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-generateUI)"}}
+[debug] [2025-07-04T13:58:05.611Z] [worker-pool] Adding worker with key us-central1-generateUI, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-generateUI, total=1"}}
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be installed as a dependency. To fix this, run "npm install --save firebase-admin" in your functions directory. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"The Cloud Functions emulator requires the module \"firebase-admin\" to be installed as a dependency. To fix this, run \"npm install --save firebase-admin\" in your functions directory."}}
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Your functions could not be parsed due to an issue with your node_modules (see above)"}}
+[debug] [2025-07-04T13:58:06.659Z] [runtime-status] [33136] Functions runtime initialized. {"cwd":"/Users/harshdeshmukh/Downloads/ui-generator/functions","node_version":"23.7.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[runtime-status] [33136] Functions runtime initialized. {\"cwd\":\"/Users/harshdeshmukh/Downloads/ui-generator/functions\",\"node_version\":\"23.7.0\"}"}}
+[debug] [2025-07-04T13:58:06.659Z] [runtime-status] [33136] Listening to port: /var/folders/k3/kn8cxctn3592nvqqx1qj9lmc0000gn/T/fire_emu_3341d6ba6a8b95e5.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[runtime-status] [33136] Listening to port: /var/folders/k3/kn8cxctn3592nvqqx1qj9lmc0000gn/T/fire_emu_3341d6ba6a8b95e5.sock"}}
+[info] >  /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53 {"user":"/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53"}}
+[info] >    const models = await genAI.listModels(); {"user":"  const models = await genAI.listModels();","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m   const models = await genAI.listModels();"}}
+[info] >                               ^ {"user":"                             ^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m                              ^"}}
+[info] >   {"user":"","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m "}}
+[info] >  TypeError: genAI.listModels is not a function {"user":"TypeError: genAI.listModels is not a function","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m TypeError: genAI.listModels is not a function"}}
+[info] >      at listModels (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53:30) {"user":"    at listModels (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53:30)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at listModels (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53:30)"}}
+[info] >      at Object.<anonymous> (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:57:1) {"user":"    at Object.<anonymous> (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:57:1)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Object.<anonymous> (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:57:1)"}}
+[info] >      at Module._compile (node:internal/modules/cjs/loader:1723:14) {"user":"    at Module._compile (node:internal/modules/cjs/loader:1723:14)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Module._compile (node:internal/modules/cjs/loader:1723:14)"}}
+[info] >      at Object..js (node:internal/modules/cjs/loader:1888:10) {"user":"    at Object..js (node:internal/modules/cjs/loader:1888:10)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Object..js (node:internal/modules/cjs/loader:1888:10)"}}
+[info] >      at Module.load (node:internal/modules/cjs/loader:1458:32) {"user":"    at Module.load (node:internal/modules/cjs/loader:1458:32)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Module.load (node:internal/modules/cjs/loader:1458:32)"}}
+[info] >      at Function._load (node:internal/modules/cjs/loader:1275:12) {"user":"    at Function._load (node:internal/modules/cjs/loader:1275:12)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Function._load (node:internal/modules/cjs/loader:1275:12)"}}
+[info] >      at TracingChannel.traceSync (node:diagnostics_channel:322:14) {"user":"    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at TracingChannel.traceSync (node:diagnostics_channel:322:14)"}}
+[info] >      at wrapModuleLoad (node:internal/modules/cjs/loader:234:24) {"user":"    at wrapModuleLoad (node:internal/modules/cjs/loader:234:24)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at wrapModuleLoad (node:internal/modules/cjs/loader:234:24)"}}
+[info] >      at Module.require (node:internal/modules/cjs/loader:1480:12) {"user":"    at Module.require (node:internal/modules/cjs/loader:1480:12)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Module.require (node:internal/modules/cjs/loader:1480:12)"}}
+[info] >      at require (node:internal/modules/helpers:135:16) {"user":"    at require (node:internal/modules/helpers:135:16)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at require (node:internal/modules/helpers:135:16)"}}
+[info] >   {"user":"","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m "}}
+[info] >  Node.js v23.7.0 {"user":"Node.js v23.7.0","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m Node.js v23.7.0"}}
+[debug] [2025-07-04T13:58:06.663Z] [worker-us-central1-generateUI-335c92ef-d3f5-4771-a992-e55ade0a5bb6]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-335c92ef-d3f5-4771-a992-e55ade0a5bb6]: exited"}}
+[debug] [2025-07-04T13:58:06.663Z] [worker-us-central1-generateUI-335c92ef-d3f5-4771-a992-e55ade0a5bb6]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-335c92ef-d3f5-4771-a992-e55ade0a5bb6]: FINISHED"}}
+[error] ⬢  functions: Failed to handle request for function us-central1-generateUI {"metadata":{"emulator":{"name":"functions"},"message":"Failed to handle request for function us-central1-generateUI"}}
+[error] ⬢  functions: Failed to start functions in /Users/harshdeshmukh/Downloads/ui-generator/functions: FirebaseError: Failed to load function. {"metadata":{"emulator":{"name":"functions"},"message":"Failed to start functions in /Users/harshdeshmukh/Downloads/ui-generator/functions: FirebaseError: Failed to load function."}}
+[debug] [2025-07-04T13:58:35.707Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:00:30.688Z] File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers"}}
+[debug] [2025-07-04T14:00:31.485Z] File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers"}}
+[debug] [2025-07-04T14:00:32.495Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-07-04T14:00:33.746Z] > [functions] package.json contents: {
+  "name": "functions",
+  "dependencies": {
+    "@google/generative-ai": "^0.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-functions": "^4.0.0"
+  },
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2025-07-04T14:00:33.747Z] Building nodejs source
+[debug] [2025-07-04T14:00:33.747Z] Failed to find version of module node: reached end of search path /Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "23". Using node@23 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-07-04T14:00:33.748Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-04T14:00:33.750Z] Found firebase-functions binary at '/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8587
+
+[debug] [2025-07-04T14:00:34.152Z] Got response from /__/functions.yaml {"endpoints":{"generateUI":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"generateUI"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[error] /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53
+  const models = await genAI.listModels();
+                             ^
+
+TypeError: genAI.listModels is not a function
+    at listModels (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53:30)
+    at Object.<anonymous> (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:57:1)
+    at Module._compile (node:internal/modules/cjs/loader:1723:14)
+    at Object..js (node:internal/modules/cjs/loader:1888:10)
+    at Module.load (node:internal/modules/cjs/loader:1458:32)
+    at Function._load (node:internal/modules/cjs/loader:1275:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:234:24)
+    at Module.require (node:internal/modules/cjs/loader:1480:12)
+    at require (node:internal/modules/helpers:135:16)
+
+Node.js v23.7.0
+
+[debug] [2025-07-04T14:00:34.155Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8587/__/quitquitquit failed, reason: read ECONNRESET {"message":"request to http://localhost:8587/__/quitquitquit failed, reason: read ECONNRESET","type":"system","errno":"ECONNRESET","code":"ECONNRESET"}
+[info] ✔  functions: Loaded functions definitions from source: generateUI. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateUI."}}
+[debug] [2025-07-04T14:01:00.548Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:01:00.548Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:01:00.549Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:01:00.548Z"],"workRunningCount":1}
+[debug] [2025-07-04T14:01:00.549Z] Accepted request OPTIONS /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T14:01:00.560Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T14:01:00.560Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T14:01:00.560Z] [worker-pool] Cleaned up workers for us-central1-generateUI: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-generateUI: 1 --> 0"}}
+[debug] [2025-07-04T14:01:00.568Z] [worker-pool] addWorker(us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-generateUI)"}}
+[debug] [2025-07-04T14:01:00.570Z] [worker-pool] Adding worker with key us-central1-generateUI, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-generateUI, total=1"}}
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be installed as a dependency. To fix this, run "npm install --save firebase-admin" in your functions directory. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"The Cloud Functions emulator requires the module \"firebase-admin\" to be installed as a dependency. To fix this, run \"npm install --save firebase-admin\" in your functions directory."}}
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Your functions could not be parsed due to an issue with your node_modules (see above)"}}
+[debug] [2025-07-04T14:01:01.648Z] [runtime-status] [33177] Functions runtime initialized. {"cwd":"/Users/harshdeshmukh/Downloads/ui-generator/functions","node_version":"23.7.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[runtime-status] [33177] Functions runtime initialized. {\"cwd\":\"/Users/harshdeshmukh/Downloads/ui-generator/functions\",\"node_version\":\"23.7.0\"}"}}
+[debug] [2025-07-04T14:01:01.648Z] [runtime-status] [33177] Listening to port: /var/folders/k3/kn8cxctn3592nvqqx1qj9lmc0000gn/T/fire_emu_73511ebf9f1a16c1.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[runtime-status] [33177] Listening to port: /var/folders/k3/kn8cxctn3592nvqqx1qj9lmc0000gn/T/fire_emu_73511ebf9f1a16c1.sock"}}
+[info] >  /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53 {"user":"/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53"}}
+[info] >    const models = await genAI.listModels(); {"user":"  const models = await genAI.listModels();","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m   const models = await genAI.listModels();"}}
+[info] >                               ^ {"user":"                             ^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m                              ^"}}
+[info] >   {"user":"","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m "}}
+[info] >  TypeError: genAI.listModels is not a function {"user":"TypeError: genAI.listModels is not a function","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m TypeError: genAI.listModels is not a function"}}
+[info] >      at listModels (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53:30) {"user":"    at listModels (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53:30)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at listModels (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:53:30)"}}
+[info] >      at Object.<anonymous> (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:57:1) {"user":"    at Object.<anonymous> (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:57:1)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Object.<anonymous> (/Users/harshdeshmukh/Downloads/ui-generator/functions/index.js:57:1)"}}
+[info] >      at Module._compile (node:internal/modules/cjs/loader:1723:14) {"user":"    at Module._compile (node:internal/modules/cjs/loader:1723:14)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Module._compile (node:internal/modules/cjs/loader:1723:14)"}}
+[info] >      at Object..js (node:internal/modules/cjs/loader:1888:10) {"user":"    at Object..js (node:internal/modules/cjs/loader:1888:10)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Object..js (node:internal/modules/cjs/loader:1888:10)"}}
+[info] >      at Module.load (node:internal/modules/cjs/loader:1458:32) {"user":"    at Module.load (node:internal/modules/cjs/loader:1458:32)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Module.load (node:internal/modules/cjs/loader:1458:32)"}}
+[info] >      at Function._load (node:internal/modules/cjs/loader:1275:12) {"user":"    at Function._load (node:internal/modules/cjs/loader:1275:12)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Function._load (node:internal/modules/cjs/loader:1275:12)"}}
+[info] >      at TracingChannel.traceSync (node:diagnostics_channel:322:14) {"user":"    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at TracingChannel.traceSync (node:diagnostics_channel:322:14)"}}
+[info] >      at wrapModuleLoad (node:internal/modules/cjs/loader:234:24) {"user":"    at wrapModuleLoad (node:internal/modules/cjs/loader:234:24)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at wrapModuleLoad (node:internal/modules/cjs/loader:234:24)"}}
+[info] >      at Module.require (node:internal/modules/cjs/loader:1480:12) {"user":"    at Module.require (node:internal/modules/cjs/loader:1480:12)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Module.require (node:internal/modules/cjs/loader:1480:12)"}}
+[info] >      at require (node:internal/modules/helpers:135:16) {"user":"    at require (node:internal/modules/helpers:135:16)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m     at require (node:internal/modules/helpers:135:16)"}}
+[info] >   {"user":"","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m "}}
+[info] >  Node.js v23.7.0 {"user":"Node.js v23.7.0","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"\u001b[90m> \u001b[39m Node.js v23.7.0"}}
+[debug] [2025-07-04T14:01:01.654Z] [worker-us-central1-generateUI-604bbdfc-9843-4eeb-bba0-9d8711343a81]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-604bbdfc-9843-4eeb-bba0-9d8711343a81]: exited"}}
+[debug] [2025-07-04T14:01:01.654Z] [worker-us-central1-generateUI-604bbdfc-9843-4eeb-bba0-9d8711343a81]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-604bbdfc-9843-4eeb-bba0-9d8711343a81]: FINISHED"}}
+[error] ⬢  functions: Failed to handle request for function us-central1-generateUI {"metadata":{"emulator":{"name":"functions"},"message":"Failed to handle request for function us-central1-generateUI"}}
+[error] ⬢  functions: Failed to start functions in /Users/harshdeshmukh/Downloads/ui-generator/functions: FirebaseError: Failed to load function. {"metadata":{"emulator":{"name":"functions"},"message":"Failed to start functions in /Users/harshdeshmukh/Downloads/ui-generator/functions: FirebaseError: Failed to load function."}}
+[debug] [2025-07-04T14:01:30.634Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:01:56.248Z] File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers"}}
+[debug] [2025-07-04T14:01:56.436Z] File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers"}}
+[debug] [2025-07-04T14:01:57.438Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-07-04T14:01:58.392Z] > [functions] package.json contents: {
+  "name": "functions",
+  "dependencies": {
+    "@google/generative-ai": "^0.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-functions": "^4.0.0"
+  },
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2025-07-04T14:01:58.392Z] Building nodejs source
+[debug] [2025-07-04T14:01:58.392Z] Failed to find version of module node: reached end of search path /Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "23". Using node@23 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-07-04T14:01:58.393Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-04T14:01:58.394Z] Found firebase-functions binary at '/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8891
+
+[debug] [2025-07-04T14:01:58.874Z] Got response from /__/functions.yaml {"endpoints":{"generateUI":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"generateUI"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: generateUI. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateUI."}}
+[debug] [2025-07-04T14:02:07.141Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:02:07.141Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:02:07.143Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:02:07.141Z"],"workRunningCount":1}
+[debug] [2025-07-04T14:02:07.143Z] Accepted request OPTIONS /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T14:02:07.147Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T14:02:07.148Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T14:02:07.148Z] [worker-pool] Cleaned up workers for us-central1-generateUI: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-generateUI: 1 --> 0"}}
+[debug] [2025-07-04T14:02:07.152Z] [worker-pool] addWorker(us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-generateUI)"}}
+[debug] [2025-07-04T14:02:07.152Z] [worker-pool] Adding worker with key us-central1-generateUI, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-generateUI, total=1"}}
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be installed as a dependency. To fix this, run "npm install --save firebase-admin" in your functions directory. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"The Cloud Functions emulator requires the module \"firebase-admin\" to be installed as a dependency. To fix this, run \"npm install --save firebase-admin\" in your functions directory."}}
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Your functions could not be parsed due to an issue with your node_modules (see above)"}}
+[debug] [2025-07-04T14:02:08.181Z] [runtime-status] [33205] Functions runtime initialized. {"cwd":"/Users/harshdeshmukh/Downloads/ui-generator/functions","node_version":"23.7.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[runtime-status] [33205] Functions runtime initialized. {\"cwd\":\"/Users/harshdeshmukh/Downloads/ui-generator/functions\",\"node_version\":\"23.7.0\"}"}}
+[debug] [2025-07-04T14:02:08.181Z] [runtime-status] [33205] Listening to port: /var/folders/k3/kn8cxctn3592nvqqx1qj9lmc0000gn/T/fire_emu_126c6f1c255d7864.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[runtime-status] [33205] Listening to port: /var/folders/k3/kn8cxctn3592nvqqx1qj9lmc0000gn/T/fire_emu_126c6f1c255d7864.sock"}}
+[debug] [2025-07-04T14:02:08.273Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE"}}
+[debug] [2025-07-04T14:02:08.273Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T14:02:08.274Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY"}}
+[debug] [2025-07-04T14:02:08.277Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 3.723291ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 3.723291ms"}}
+[debug] [2025-07-04T14:02:08.278Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE"}}
+[debug] [2025-07-04T14:02:08.278Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T14:02:08.278Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T14:02:08.278Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:02:08.281Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:02:08.281Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:02:08.281Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:02:08.281Z"],"workRunningCount":1}
+[debug] [2025-07-04T14:02:08.281Z] Accepted request POST /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T14:02:08.282Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T14:02:08.282Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T14:02:08.282Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T14:02:08.282Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY"}}
+[debug] [2025-07-04T14:02:43.161Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 34881.2325ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 34881.2325ms"}}
+[debug] [2025-07-04T14:02:43.162Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE"}}
+[debug] [2025-07-04T14:02:43.162Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T14:02:43.162Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T14:02:43.162Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:16:32.169Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:16:32.165Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:16:32.174Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:16:32.165Z"],"workRunningCount":1}
+[debug] [2025-07-04T14:16:32.175Z] Accepted request GET /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T14:16:32.210Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T14:16:32.211Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T14:16:32.212Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T14:16:32.219Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY"}}
+[debug] [2025-07-04T14:16:32.253Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 33.974125ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 33.974125ms"}}
+[debug] [2025-07-04T14:16:32.254Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE"}}
+[debug] [2025-07-04T14:16:32.254Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T14:16:32.254Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T14:16:32.254Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:16:47.131Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:16:47.131Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:16:47.132Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:16:47.131Z"],"workRunningCount":1}
+[debug] [2025-07-04T14:16:47.133Z] Accepted request GET /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T14:16:47.136Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T14:16:47.136Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T14:16:47.136Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T14:16:47.137Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY"}}
+[debug] [2025-07-04T14:16:47.150Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 12.83775ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 12.83775ms"}}
+[debug] [2025-07-04T14:16:47.150Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE"}}
+[debug] [2025-07-04T14:16:47.150Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T14:16:47.150Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T14:16:47.150Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:21:39.247Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:21:39.244Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:21:39.249Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:21:39.244Z"],"workRunningCount":1}
+[debug] [2025-07-04T14:21:39.249Z] Accepted request POST /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T14:21:39.279Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T14:21:39.280Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T14:21:39.280Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T14:21:39.283Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY"}}
+[debug] [2025-07-04T14:21:54.062Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 14782.616292ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 14782.616292ms"}}
+[debug] [2025-07-04T14:21:54.065Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE"}}
+[debug] [2025-07-04T14:21:54.065Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T14:21:54.065Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T14:21:54.069Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:33:23.165Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:33:23.164Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:33:23.168Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:33:23.164Z"],"workRunningCount":1}
+[debug] [2025-07-04T14:33:23.168Z] Accepted request OPTIONS /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T14:33:23.196Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T14:33:23.198Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T14:33:23.198Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T14:33:23.237Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY"}}
+[debug] [2025-07-04T14:33:23.250Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 13.299708ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 13.299708ms"}}
+[debug] [2025-07-04T14:33:23.251Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE"}}
+[debug] [2025-07-04T14:33:23.252Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T14:33:23.252Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T14:33:23.252Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:33:23.253Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:33:23.253Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:33:23.253Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:33:23.253Z"],"workRunningCount":1}
+[debug] [2025-07-04T14:33:23.253Z] Accepted request POST /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T14:33:23.254Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T14:33:23.254Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T14:33:23.254Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T14:33:23.254Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY"}}
+[debug] [2025-07-04T14:33:31.635Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 8381.528959ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 8381.528959ms"}}
+[debug] [2025-07-04T14:33:31.635Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE"}}
+[debug] [2025-07-04T14:33:31.635Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T14:33:31.635Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T14:33:31.636Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:50:11.234Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:50:11.232Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:50:11.236Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:50:11.232Z"],"workRunningCount":1}
+[debug] [2025-07-04T14:50:11.237Z] Accepted request OPTIONS /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T14:50:11.251Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T14:50:11.251Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T14:50:11.252Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T14:50:11.252Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY"}}
+[debug] [2025-07-04T14:50:11.293Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 41.563667ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 41.563667ms"}}
+[debug] [2025-07-04T14:50:11.297Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE"}}
+[debug] [2025-07-04T14:50:11.297Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T14:50:11.300Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T14:50:11.301Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:50:11.301Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:50:11.301Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:50:11.301Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:50:11.301Z"],"workRunningCount":1}
+[debug] [2025-07-04T14:50:11.301Z] Accepted request POST /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T14:50:11.304Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T14:50:11.305Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T14:50:11.306Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T14:50:11.306Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: BUSY"}}
+[debug] [2025-07-04T14:50:16.673Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 5366.740125ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 5366.740125ms"}}
+[debug] [2025-07-04T14:50:16.675Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: IDLE"}}
+[debug] [2025-07-04T14:50:16.675Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T14:50:16.675Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T14:50:16.676Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:53:57.422Z] File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers"}}
+[debug] [2025-07-04T14:53:58.444Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-07-04T14:53:59.300Z] > [functions] package.json contents: {
+  "name": "functions",
+  "dependencies": {
+    "@google/generative-ai": "^0.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-functions": "^4.0.0"
+  },
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2025-07-04T14:53:59.300Z] Building nodejs source
+[debug] [2025-07-04T14:53:59.300Z] Failed to find version of module node: reached end of search path /Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "23". Using node@23 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-07-04T14:53:59.307Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-04T14:53:59.310Z] Found firebase-functions binary at '/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8938
+
+[debug] [2025-07-04T14:53:59.720Z] Got response from /__/functions.yaml {"endpoints":{"generateUI":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"generateUI"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: generateUI. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateUI."}}
+[debug] [2025-07-04T14:54:03.766Z] [worker-pool] Shutting down IDLE worker (us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-generateUI)"}}
+[debug] [2025-07-04T14:54:03.766Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: FINISHING"}}
+[debug] [2025-07-04T14:54:03.774Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: exited"}}
+[debug] [2025-07-04T14:54:03.774Z] [worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f4587a29-75d3-41ab-9d99-6c300da08d4f]: FINISHED"}}
+[debug] [2025-07-04T14:54:09.927Z] File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers"}}
+[debug] [2025-07-04T14:54:10.930Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-07-04T14:54:11.830Z] > [functions] package.json contents: {
+  "name": "functions",
+  "dependencies": {
+    "@google/generative-ai": "^0.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-functions": "^4.0.0"
+  },
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2025-07-04T14:54:11.830Z] Building nodejs source
+[debug] [2025-07-04T14:54:11.830Z] Failed to find version of module node: reached end of search path /Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "23". Using node@23 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-07-04T14:54:11.831Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-04T14:54:11.831Z] Found firebase-functions binary at '/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8341
+
+[debug] [2025-07-04T14:54:12.266Z] Got response from /__/functions.yaml {"endpoints":{"generateUI":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"generateUI"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: generateUI. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateUI."}}
+[debug] [2025-07-04T14:54:16.844Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:54:16.844Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:54:16.845Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:54:16.844Z"],"workRunningCount":1}
+[debug] [2025-07-04T14:54:16.845Z] Accepted request OPTIONS /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T14:54:16.851Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T14:54:16.851Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T14:54:16.851Z] [worker-pool] Cleaned up workers for us-central1-generateUI: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-generateUI: 1 --> 0"}}
+[debug] [2025-07-04T14:54:16.856Z] [worker-pool] addWorker(us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-generateUI)"}}
+[debug] [2025-07-04T14:54:16.856Z] [worker-pool] Adding worker with key us-central1-generateUI, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-generateUI, total=1"}}
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be installed as a dependency. To fix this, run "npm install --save firebase-admin" in your functions directory. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"The Cloud Functions emulator requires the module \"firebase-admin\" to be installed as a dependency. To fix this, run \"npm install --save firebase-admin\" in your functions directory."}}
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Your functions could not be parsed due to an issue with your node_modules (see above)"}}
+[debug] [2025-07-04T14:54:18.105Z] [runtime-status] [33969] Functions runtime initialized. {"cwd":"/Users/harshdeshmukh/Downloads/ui-generator/functions","node_version":"23.7.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[runtime-status] [33969] Functions runtime initialized. {\"cwd\":\"/Users/harshdeshmukh/Downloads/ui-generator/functions\",\"node_version\":\"23.7.0\"}"}}
+[debug] [2025-07-04T14:54:18.105Z] [runtime-status] [33969] Listening to port: /var/folders/k3/kn8cxctn3592nvqqx1qj9lmc0000gn/T/fire_emu_926eb321db7c4950.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[runtime-status] [33969] Listening to port: /var/folders/k3/kn8cxctn3592nvqqx1qj9lmc0000gn/T/fire_emu_926eb321db7c4950.sock"}}
+[debug] [2025-07-04T14:54:18.175Z] [worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: IDLE"}}
+[debug] [2025-07-04T14:54:18.175Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T14:54:18.176Z] [worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: BUSY"}}
+[debug] [2025-07-04T14:54:18.179Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 3.097583ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 3.097583ms"}}
+[debug] [2025-07-04T14:54:18.179Z] [worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: IDLE"}}
+[debug] [2025-07-04T14:54:18.179Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T14:54:18.179Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T14:54:18.179Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:54:18.183Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:54:18.183Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:54:18.183Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T14:54:18.183Z"],"workRunningCount":1}
+[debug] [2025-07-04T14:54:18.183Z] Accepted request POST /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T14:54:18.183Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T14:54:18.183Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T14:54:18.183Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T14:54:18.183Z] [worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: BUSY"}}
+[debug] [2025-07-04T14:54:25.193Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 7010.586042ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 7010.586042ms"}}
+[debug] [2025-07-04T14:54:25.195Z] [worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: IDLE"}}
+[debug] [2025-07-04T14:54:25.195Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T14:54:25.195Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T14:54:25.195Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T14:58:36.953Z] File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers"}}
+[debug] [2025-07-04T14:58:37.972Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-07-04T14:58:38.949Z] > [functions] package.json contents: {
+  "name": "functions",
+  "dependencies": {
+    "@google/generative-ai": "^0.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-functions": "^4.0.0"
+  },
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2025-07-04T14:58:38.949Z] Building nodejs source
+[debug] [2025-07-04T14:58:38.949Z] Failed to find version of module node: reached end of search path /Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "23". Using node@23 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-07-04T14:58:38.951Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-04T14:58:38.953Z] Found firebase-functions binary at '/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8157
+
+[debug] [2025-07-04T14:58:39.312Z] Got response from /__/functions.yaml {"endpoints":{"generateUI":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"generateUI"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: generateUI. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateUI."}}
+[debug] [2025-07-04T14:58:43.333Z] [worker-pool] Shutting down IDLE worker (us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-generateUI)"}}
+[debug] [2025-07-04T14:58:43.333Z] [worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: FINISHING"}}
+[debug] [2025-07-04T14:58:43.341Z] [worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: exited"}}
+[debug] [2025-07-04T14:58:43.341Z] [worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-a5f7bbfc-30de-4035-9781-41fb55e79be3]: FINISHED"}}
+[debug] [2025-07-04T15:03:41.083Z] File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/harshdeshmukh/Downloads/ui-generator/functions/index.js changed, reloading triggers"}}
+[debug] [2025-07-04T15:03:42.098Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-07-04T15:03:42.773Z] > [functions] package.json contents: {
+  "name": "functions",
+  "dependencies": {
+    "@google/generative-ai": "^0.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-functions": "^4.0.0"
+  },
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2025-07-04T15:03:42.773Z] Building nodejs source
+[debug] [2025-07-04T15:03:42.773Z] Failed to find version of module node: reached end of search path /Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "23". Using node@23 from host. 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-07-04T15:03:42.776Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-04T15:03:42.777Z] Found firebase-functions binary at '/Users/harshdeshmukh/Downloads/ui-generator/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8995
+
+[debug] [2025-07-04T15:03:43.142Z] Got response from /__/functions.yaml {"endpoints":{"generateUI":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"generateUI"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: generateUI. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: generateUI."}}
+[debug] [2025-07-04T15:03:50.712Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:03:50.712Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:03:50.712Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:03:50.712Z"],"workRunningCount":1}
+[debug] [2025-07-04T15:03:50.712Z] Accepted request POST /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T15:03:50.720Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T15:03:50.720Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T15:03:50.720Z] [worker-pool] Cleaned up workers for us-central1-generateUI: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-generateUI: 1 --> 0"}}
+[debug] [2025-07-04T15:03:50.722Z] [worker-pool] addWorker(us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-generateUI)"}}
+[debug] [2025-07-04T15:03:50.722Z] [worker-pool] Adding worker with key us-central1-generateUI, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-generateUI, total=1"}}
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be installed as a dependency. To fix this, run "npm install --save firebase-admin" in your functions directory. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"The Cloud Functions emulator requires the module \"firebase-admin\" to be installed as a dependency. To fix this, run \"npm install --save firebase-admin\" in your functions directory."}}
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Your functions could not be parsed due to an issue with your node_modules (see above)"}}
+[debug] [2025-07-04T15:03:51.730Z] [runtime-status] [34153] Functions runtime initialized. {"cwd":"/Users/harshdeshmukh/Downloads/ui-generator/functions","node_version":"23.7.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[runtime-status] [34153] Functions runtime initialized. {\"cwd\":\"/Users/harshdeshmukh/Downloads/ui-generator/functions\",\"node_version\":\"23.7.0\"}"}}
+[debug] [2025-07-04T15:03:51.730Z] [runtime-status] [34153] Listening to port: /var/folders/k3/kn8cxctn3592nvqqx1qj9lmc0000gn/T/fire_emu_c7ad289bc90b89a4.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[runtime-status] [34153] Listening to port: /var/folders/k3/kn8cxctn3592nvqqx1qj9lmc0000gn/T/fire_emu_c7ad289bc90b89a4.sock"}}
+[debug] [2025-07-04T15:03:51.738Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE"}}
+[debug] [2025-07-04T15:03:51.739Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T15:03:51.739Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY"}}
+[debug] [2025-07-04T15:04:07.894Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 16157.55275ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 16157.55275ms"}}
+[debug] [2025-07-04T15:04:07.897Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE"}}
+[debug] [2025-07-04T15:04:07.897Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T15:04:07.897Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T15:04:07.897Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:10:30.160Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:10:30.133Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:10:30.195Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:10:30.133Z"],"workRunningCount":1}
+[debug] [2025-07-04T15:10:30.197Z] Accepted request OPTIONS /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T15:10:30.293Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T15:10:30.296Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T15:10:30.300Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T15:10:30.318Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY"}}
+[debug] [2025-07-04T15:10:30.686Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 368.853666ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 368.853666ms"}}
+[debug] [2025-07-04T15:10:30.687Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE"}}
+[debug] [2025-07-04T15:10:30.687Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T15:10:30.688Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T15:10:30.688Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:10:30.690Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:10:30.690Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:10:30.690Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:10:30.690Z"],"workRunningCount":1}
+[debug] [2025-07-04T15:10:30.690Z] Accepted request POST /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T15:10:30.692Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T15:10:30.692Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T15:10:30.692Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T15:10:30.692Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY"}}
+[debug] [2025-07-04T15:10:37.349Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 6659.181333ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 6659.181333ms"}}
+[debug] [2025-07-04T15:10:37.352Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE"}}
+[debug] [2025-07-04T15:10:37.352Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T15:10:37.353Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T15:10:37.353Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:11:23.730Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:11:23.730Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:11:23.731Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:11:23.730Z"],"workRunningCount":1}
+[debug] [2025-07-04T15:11:23.731Z] Accepted request OPTIONS /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T15:11:23.735Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T15:11:23.735Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T15:11:23.735Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T15:11:23.736Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY"}}
+[debug] [2025-07-04T15:11:23.750Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 14.566917ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 14.566917ms"}}
+[debug] [2025-07-04T15:11:23.754Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE"}}
+[debug] [2025-07-04T15:11:23.754Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T15:11:23.755Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T15:11:23.755Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:11:23.756Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:11:23.756Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:11:23.756Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:11:23.756Z"],"workRunningCount":1}
+[debug] [2025-07-04T15:11:23.756Z] Accepted request POST /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T15:11:23.758Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T15:11:23.758Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T15:11:23.758Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T15:11:23.760Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY"}}
+[debug] [2025-07-04T15:11:39.626Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 15876.727ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 15876.727ms"}}
+[debug] [2025-07-04T15:11:39.637Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE"}}
+[debug] [2025-07-04T15:11:39.637Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T15:11:39.638Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T15:11:39.638Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:17:50.138Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:17:50.134Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:17:50.141Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:17:50.134Z"],"workRunningCount":1}
+[debug] [2025-07-04T15:17:50.141Z] Accepted request OPTIONS /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T15:17:50.184Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T15:17:50.190Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T15:17:50.190Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T15:17:50.196Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY"}}
+[debug] [2025-07-04T15:17:50.359Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 163.568875ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 163.568875ms"}}
+[debug] [2025-07-04T15:17:50.362Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE"}}
+[debug] [2025-07-04T15:17:50.362Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T15:17:50.362Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T15:17:50.363Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:17:50.368Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:17:50.368Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:17:50.369Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:17:50.368Z"],"workRunningCount":1}
+[debug] [2025-07-04T15:17:50.369Z] Accepted request POST /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T15:17:50.375Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T15:17:50.377Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T15:17:50.377Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T15:17:50.381Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY"}}
+[debug] [2025-07-04T15:18:44.160Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 53783.473125ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 53783.473125ms"}}
+[debug] [2025-07-04T15:18:44.163Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE"}}
+[debug] [2025-07-04T15:18:44.164Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T15:18:44.164Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T15:18:44.164Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:22:26.017Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:22:26.015Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:22:26.021Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:22:26.015Z"],"workRunningCount":1}
+[debug] [2025-07-04T15:22:26.021Z] Accepted request OPTIONS /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T15:22:26.071Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T15:22:26.071Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T15:22:26.071Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T15:22:26.076Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY"}}
+[debug] [2025-07-04T15:22:26.090Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 16.193125ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 16.193125ms"}}
+[debug] [2025-07-04T15:22:26.094Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE"}}
+[debug] [2025-07-04T15:22:26.094Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T15:22:26.094Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T15:22:26.094Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:22:26.099Z] [work-queue] {"queuedWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:22:26.099Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-04T15:22:26.101Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/ui-generator-d7f03/us-central1/generateUI/generate-ui-2025-07-04T15:22:26.099Z"],"workRunningCount":1}
+[debug] [2025-07-04T15:22:26.101Z] Accepted request POST /ui-generator-d7f03/us-central1/generateUI/generate-ui --> us-central1-generateUI
+[debug] [2025-07-04T15:22:26.102Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-04T15:22:26.102Z] [functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ui-generator-d7f03/us-central1/generateUI/generate-ui, mapping to path=/generate-ui"}}
+[debug] [2025-07-04T15:22:26.102Z] [worker-pool] submitRequest(triggerId=us-central1-generateUI) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-generateUI)"}}
+[info] i  functions: Beginning execution of "us-central1-generateUI" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Beginning execution of \"us-central1-generateUI\""}}
+[debug] [2025-07-04T15:22:26.104Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: BUSY"}}
+[debug] [2025-07-04T15:22:51.221Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-generateUI" in 25124.901ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finished \"us-central1-generateUI\" in 25124.901ms"}}
+[debug] [2025-07-04T15:22:51.245Z] [worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"[worker-us-central1-generateUI-f1d5461c-d700-46c2-9ab9-3266faed79dc]: IDLE"}}
+[debug] [2025-07-04T15:22:51.251Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-04T15:22:51.251Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-generateUI"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-04T15:22:51.251Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}

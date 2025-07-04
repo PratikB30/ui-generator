@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import "./App.css";
 
 function App() {
@@ -13,13 +14,18 @@ function App() {
     setLoading(true);
     setError("");
     try {
-      const response = await fetch("/generate-ui", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ requirement })
-      });
+      // Use the local Firebase emulator endpoint for development
+      // Replace YOUR_PROJECT_ID with your actual Firebase project ID
+      const response = await fetch(
+        "http://localhost:5001/ui-generator-d7f03/us-central1/generateUI/generate-ui",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ requirement }),
+        }
+      );
       const data = await response.json();
       if (data.status === "success") {
         setMarkdown(data.markdown);
@@ -58,7 +64,7 @@ function App() {
       </button>
       {error && <p className="error">{error}</p>}
       <div className="output">
-        <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} />
+        <ReactMarkdown children={markdown} rehypePlugins={[rehypeRaw]} />
       </div>
     </div>
   );
