@@ -1,5 +1,19 @@
 {
+  "name": "requirement-to-ui-generator",
+  "version": "1.0.0",
+  "description": "AI-powered UI generator with beautiful frontend and Firebase Functions backend",
+  "scripts": {
+    "start": "cd frontend && npm start",
+    "start:backend": "firebase emulators:start --only functions",
+    "start:full": "concurrently \"npm run start:backend\" \"npm run start\"",
+    "build": "cd frontend && npm run build",
+    "install-deps": "npm install && cd frontend && npm install && cd ../functions && npm install",
+    "dev": "concurrently \"firebase emulators:start --only functions\" \"cd frontend && set PORT=5002 && npm start\""
+  },
   "dependencies": {
     "rehype-raw": "^7.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }

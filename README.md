@@ -1,57 +1,163 @@
+# AI UI Generator
 
-🗂️ Step 1: Folder Setup
-Create a new folder (e.g. requirement-to-ui-generator)
+A powerful AI-driven application that transforms requirements into beautiful UI components using React, Tailwind CSS, and Firebase Functions.
 
-Inside it, add these two folders:
+## 🚀 Features
 
-frontend/    ← React App
-functions/   ← Firebase Cloud Functions
+- **AI-Powered UI Generation**: Uses Google's Gemini AI to convert requirements into UI components
+- **Beautiful Frontend**: Modern React app with Tailwind CSS and shadcn/ui components
+- **Firebase Backend**: Serverless functions for AI processing
+- **File Upload**: Support for uploading requirement documents
+- **Real-time Preview**: See generated UI components instantly
+- **Responsive Design**: Works on all devices
 
-functions/index.js, functions/package.json
+## 🛠️ Tech Stack
 
-frontend/src/App.js, frontend/src/App.css, frontend/src/index.js
+- **Frontend**: React, Tailwind CSS, shadcn/ui, Lucide React
+- **Backend**: Firebase Functions, Express.js
+- **AI**: Google Generative AI (Gemini)
+- **Styling**: Tailwind CSS with custom design system
 
-frontend/public/index.html
+## 📋 Prerequisites
 
-Top-level firebase.json, .firebaserc
+- Node.js (v18 or higher)
+- npm or yarn
+- Firebase CLI (`npm install -g firebase-tools`)
+- Google AI API Key
 
-🔧 Step 2: Initialize Firebase
-In your project root folder (requirement-to-ui-generator), run:
+## 🚀 Quick Start
 
-bash
-Copy
-Edit
-firebase init
-When prompted:
+### Option 1: Run Everything at Once (Recommended)
 
-✔ Select: Functions, Hosting
+```bash
+# Install all dependencies
+npm run install-deps
 
-Select JavaScript for Functions
+# Start both frontend and backend
+npm run dev
+```
 
-Choose functions folder
+### Option 2: Run Services Separately
 
-Select "frontend/build" for Hosting public directory
+```bash
+# Terminal 1: Start the backend (Firebase Functions)
+npm run start:backend
 
+# Terminal 2: Start the frontend
+npm run start
+```
 
-🧠 Step 3: Install Dependencies
-For Firebase Functions:
+### Option 3: Manual Setup
 
-cd functions
-
+```bash
+# Install root dependencies
 npm install
 
-For Frontend (React):
-cd ../frontend
-npm install
+# Install frontend dependencies
+cd frontend && npm install
 
-🛠 Step 4: Build the React App
+# Install backend dependencies
+cd ../functions && npm install
+
+# Start backend (Terminal 1)
+cd .. && firebase emulators:start --only functions
+
+# Start frontend (Terminal 2)
+cd frontend && npm start
+```
+
+## 🌐 Access Points
+
+- **Frontend**: http://localhost:5002
+- **Backend**: http://localhost:5001
+- **Firebase Emulator UI**: http://localhost:4000
+
+## 🔧 Configuration
+
+### API Key Setup
+
+1. Get your Google AI API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. Update the API key in `functions/index.js`:
+   ```javascript
+   const genAI = new GoogleGenerativeAI("YOUR_API_KEY_HERE");
+   ```
+
+### Port Configuration
+
+- Frontend runs on port 5002 (configurable in `frontend/package.json`)
+- Backend runs on port 5001 (Firebase Functions emulator)
+
+## 📝 Usage
+
+1. **Enter Requirements**: Type your UI requirements in the text area
+2. **Upload File**: Or upload a file containing your requirements
+3. **Generate UI**: Click "Generate UI" to create components
+4. **View Results**: See the generated UI components in the preview panel
+
+## 🎨 Features
+
+- **Modern Design**: Beautiful gradient backgrounds and professional styling
+- **Responsive Layout**: Works perfectly on desktop and mobile
+- **Loading States**: Smooth animations and feedback
+- **Error Handling**: Clear error messages and validation
+- **File Support**: Upload .txt, .md, .doc, .docx files
+- **Markdown Rendering**: Rich preview of generated components
+
+## 🏗️ Project Structure
+
+```
+requirement-to-ui-generator/
+├── frontend/                 # React frontend application
+│   ├── src/
+│   │   ├── components/ui/   # shadcn/ui components
+│   │   ├── lib/            # Utility functions
+│   │   └── App.js          # Main application
+│   └── package.json
+├── functions/               # Firebase Functions backend
+│   ├── index.js            # AI processing logic
+│   └── package.json
+└── package.json            # Root configuration
+```
+
+## 🔍 Troubleshooting
+
+### Common Issues
+
+1. **Port Conflicts**: If port 5001 or 5002 is in use, the services will automatically use the next available port
+2. **API Key Issues**: Ensure your Google AI API key is valid and has sufficient credits
+3. **Firebase CLI**: Make sure Firebase CLI is installed globally (`npm install -g firebase-tools`)
+
+### Development Commands
+
+```bash
+# Install all dependencies
+npm run install-deps
+
+# Start development environment
+npm run dev
+
+# Build for production
 npm run build
-This builds your React app into frontend/build/ — needed for Firebase Hosting.
 
-🚀 Step 5: Deploy Everything
-Go back to the root folder and run:
+# Start only frontend
+npm run start
 
-bash
-Copy
-Edit
-firebase deploy
+# Start only backend
+npm run start:backend
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+**Built with ❤️ using React, Tailwind CSS, and Firebase Functions**
