@@ -42,17 +42,108 @@ function App() {
         setError(data.message || "Unknown error");
       }
     } catch (err) {
+      console.error("Backend connection error:", err);
       setError("Failed to connect to backend. Please check if the Firebase Functions emulator is running on port 5001.");
     }
     setLoading(false);
   };
 
-  const handleFileUpload = (e) => {
+  const extractPDFText = async (arrayBuffer) => {
+    // @ts-ignore - pdfjsLib is loaded from CDN
+    const pdf = await window.pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+    const textContent = [];
+    
+    // Extract text from all pages
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const content = await page.getTextContent();
+      
+      let lastY = null;
+      let textLine = [];
+      
+      // Process each text item
+      for (const item of content.items) {
+        if (lastY !== item.transform[5]) {
+          if (textLine.length > 0) {
+            textContent.push(textLine.join(' '));
+            textLine = [];
+          }
+          lastY = item.transform[5];
+        }
+        textLine.push(item.str);
+      }
+      
+      // Add the last line
+      if (textLine.length > 0) {
+        textContent.push(textLine.join(' '));
+      }
+      
+      // Add page break if not last page
+      if (i < pdf.numPages) {
+        textContent.push('\n\n--- Page Break ---\n\n');
+      }
+    }
+    
+    return textContent.join('\n');
+  };
+
+  const extractWordText = async (arrayBuffer) => {
+    try {
+      // @ts-ignore - mammoth is loaded from CDN
+      const result = await window.mammoth.extractRawText({ arrayBuffer });
+      if (result.messages.length > 0) {
+        console.log("Mammoth messages:", result.messages);
+      }
+      return result.value;
+    } catch (err) {
+      console.error('Word document parsing error:', err);
+      throw new Error('Failed to parse Word document. Please ensure it\'s a valid .docx file.');
+    }
+  };
+
+  const handleFileUpload = async (e) => {
     const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => setRequirement(e.target.result);
-      reader.readAsText(file);
+    if (!file) return;
+
+    try {
+      let text = "";
+      setLoading(true);
+      setError("");
+
+      // Validate file size (max 10MB)
+      if (file.size > 10 * 1024 * 1024) {
+        throw new Error("File is too large. Maximum size is 10MB.");
+      }
+
+      if (file.type === "application/pdf") {
+        const arrayBuffer = await file.arrayBuffer();
+        text = await extractPDFText(arrayBuffer);
+      } else if (file.type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document" || 
+                 file.name.toLowerCase().endsWith('.docx')) {
+        const arrayBuffer = await file.arrayBuffer();
+        text = await extractWordText(arrayBuffer);
+      } else if (file.type.startsWith('text/')) {
+        text = await file.text();
+      } else {
+        throw new Error(`Unsupported file type: ${file.type}. Please upload a PDF, Word document (.docx), or text file.`);
+      }
+
+      // Clean up the extracted text
+      text = text
+        .replace(/\s+/g, ' ')  // Replace multiple spaces with single space
+        .replace(/\n\s*\n/g, '\n\n')  // Replace multiple newlines with double newline
+        .trim();  // Remove leading/trailing whitespace
+
+      if (!text.trim()) {
+        throw new Error("No text could be extracted from the file. Please ensure the file contains text content.");
+      }
+
+      setRequirement(text);
+    } catch (err) {
+      setError(`Failed to read file: ${err.message}`);
+      console.error('File reading error:', err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -89,7 +180,7 @@ function App() {
                 Requirements Input
               </CardTitle>
               <CardDescription>
-                Describe your UI requirements or upload a file containing your specifications
+                Describe your UI requirements or upload a file (PDF, Word, or text) containing your specifications
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -110,7 +201,7 @@ function App() {
                   <Input
                     type="file"
                     onChange={handleFileUpload}
-                    accept=".txt,.md,.doc,.docx"
+                    accept=".txt,.md,.pdf,.docx"
                     className="flex-1"
                   />
                   <Upload className="h-4 w-4 text-muted-foreground" />
