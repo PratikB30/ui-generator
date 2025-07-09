@@ -13,14 +13,16 @@ import {
   CardTitle,
 } from "./components/ui/card";
 import { Alert, AlertDescription } from "./components/ui/alert";
-import { Upload, FileText, Sparkles, Loader2, AlertCircle } from "lucide-react";
+import { Upload, FileText, Sparkles, Loader2, AlertCircle, Code, Eye } from "lucide-react";
 import "./App.css";
+import "./markdown.css";
 
 function App() {
   const [requirement, setRequirement] = useState("");
   const [markdown, setMarkdown] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [viewMode, setViewMode] = useState("ui"); // "ui" or "markdown"
 
   const handleSubmit = async () => {
     if (!requirement.trim()) {
@@ -267,31 +269,72 @@ function App() {
           {/* Output Section */}
           <Card className="h-fit">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Sparkles className="h-5 w-5" />
-                Generated UI
-              </CardTitle>
+              <div className="flex justify-between items-center">
+                <CardTitle className="flex items-center gap-2">
+                  <Sparkles className="h-5 w-5" />
+                  Generated UI
+                </CardTitle>
+                {markdown && (
+                  <div className="flex gap-2">
+                    <Button
+                      variant={viewMode === "ui" ? "default" : "outline"}
+                      size="sm"
+                      onClick={() => setViewMode("ui")}
+                    >
+                      <Eye className="h-4 w-4 mr-1" />
+                      UI View
+                    </Button>
+                    <Button
+                      variant={viewMode === "markdown" ? "default" : "outline"}
+                      size="sm"
+                      onClick={() => setViewMode("markdown")}
+                    >
+                      <Code className="h-4 w-4 mr-1" />
+                      Markdown
+                    </Button>
+                  </div>
+                )}
+              </div>
               <CardDescription>
-                Preview the generated UI components and code
+                {markdown 
+                  ? (viewMode === "ui" 
+                      ? "Preview of the generated UI components" 
+                      : "Raw markdown output from the AI")
+                  : "Preview the generated UI components and code"}
               </CardDescription>
             </CardHeader>
             <CardContent>
+              {error && (
+                <Alert variant="destructive" className="mb-4">
+                  <AlertCircle className="h-4 w-4" />
+                  <AlertDescription>{error}</AlertDescription>
+                </Alert>
+              )}
+              
               {markdown ? (
                 <div className="prose prose-sm max-w-none">
-                  <ReactMarkdown
-                    children={markdown}
-                    rehypePlugins={[rehypeRaw]}
-                    remarkPlugins={[remarkGfm]}
-                    className="prose-headings:text-foreground prose-p:text-muted-foreground prose-code:bg-muted prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-muted prose-pre:p-4"
-                  />
+                  {viewMode === "ui" ? (
+                    <div className="markdown-content">
+                      <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        rehypePlugins={[rehypeRaw]}
+                        className="prose-headings:text-foreground prose-p:text-muted-foreground prose-code:bg-muted prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-muted prose-pre:p-4"
+                      >
+                        {markdown}
+                      </ReactMarkdown>
+                    </div>
+                  ) : (
+                    <pre className="bg-slate-100 p-4 rounded-lg overflow-x-auto border border-slate-200">
+                      <code className="text-slate-900 whitespace-pre-wrap">{markdown}</code>
+                    </pre>
+                  )}
                 </div>
               ) : (
-                <div className="text-center py-12 text-muted-foreground">
-                  <FileText className="h-12 w-12 mx-auto mb-4 opacity-50" />
-                  <p>Generated UI will appear here</p>
-                  <p className="text-sm">
-                    Enter your requirements and click "Generate UI" to get
-                    started
+                <div className="text-center py-12">
+                  <FileText className="h-16 w-16 mx-auto mb-4 text-gray-300" />
+                  <p className="text-lg font-medium text-gray-600 mb-2">Generated UI will appear here</p>
+                  <p className="text-sm text-gray-500">
+                    Enter your requirements and click "Generate UI" to get started
                   </p>
                 </div>
               )}
