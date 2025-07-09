@@ -52,14 +52,27 @@ ${requirementText}
 
   const result = await model.generateContent(prompt);
   const response = await result.response;
-  return response.text();
+  const markdown = response.text();
+  // Try to serialize the raw response safely
+  let rawAIResponse;
+  try {
+    rawAIResponse = response;
+    // If response is not serializable, fallback to JSON.stringify
+    JSON.stringify(rawAIResponse);
+  } catch (e) {
+    rawAIResponse = {
+      error: "Raw response not serializable",
+      message: e.message,
+    };
+  }
+  return { markdown, rawAIResponse };
 }
 
 app.post("/generate-ui", async (req, res) => {
   try {
     const { requirement } = req.body;
-    const markdown = await generateUI(requirement);
-    res.status(200).send({ status: "success", markdown });
+    const { markdown, rawAIResponse } = await generateUI(requirement);
+    res.status(200).send({ status: "success", markdown, rawAIResponse });
   } catch (error) {
     console.error("Error:", error);
     res

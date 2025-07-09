@@ -13,13 +13,23 @@ import {
   CardTitle,
 } from "./components/ui/card";
 import { Alert, AlertDescription } from "./components/ui/alert";
-import { Upload, FileText, Sparkles, Loader2, AlertCircle, Code, Eye } from "lucide-react";
+import {
+  Upload,
+  FileText,
+  Sparkles,
+  Loader2,
+  AlertCircle,
+  Code,
+  Eye,
+} from "lucide-react";
 import "./App.css";
 import "./markdown.css";
 
 function App() {
   const [requirement, setRequirement] = useState("");
   const [markdown, setMarkdown] = useState("");
+  const [rawResponse, setRawResponse] = useState(null); // full API response
+  const [rawAIResponse, setRawAIResponse] = useState(null); // Gemini raw response
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [viewMode, setViewMode] = useState("ui"); // "ui" or "markdown"
@@ -44,9 +54,12 @@ function App() {
         }
       );
       const data = await response.json();
+      setRawResponse(data); // <-- store full response
+      setRawAIResponse(data.rawAIResponse || null); // <-- store Gemini raw response
       if (data.status === "success") {
         setMarkdown(data.markdown);
       } else {
+        setMarkdown("");
         setError(data.message || "Unknown error");
       }
     } catch (err) {
@@ -54,6 +67,8 @@ function App() {
       setError(
         "Failed to connect to backend. Please check if the Firebase Functions emulator is running on port 5001."
       );
+      setMarkdown("");
+      setRawResponse(null);
     }
     setLoading(false);
   };
@@ -170,6 +185,8 @@ function App() {
   const clearAll = () => {
     setRequirement("");
     setMarkdown("");
+    setRawResponse(null); // <-- clear raw response
+    setRawAIResponse(null); // <-- clear Gemini raw response
     setError("");
   };
 
@@ -296,10 +313,10 @@ function App() {
                 )}
               </div>
               <CardDescription>
-                {markdown 
-                  ? (viewMode === "ui" 
-                      ? "Preview of the generated UI components" 
-                      : "Raw markdown output from the AI")
+                {markdown
+                  ? viewMode === "ui"
+                    ? "Preview of the generated UI components"
+                    : "Raw markdown output from the AI"
                   : "Preview the generated UI components and code"}
               </CardDescription>
             </CardHeader>
@@ -310,7 +327,7 @@ function App() {
                   <AlertDescription>{error}</AlertDescription>
                 </Alert>
               )}
-              
+
               {markdown ? (
                 <div className="prose prose-sm max-w-none">
                   {viewMode === "ui" ? (
@@ -325,16 +342,23 @@ function App() {
                     </div>
                   ) : (
                     <pre className="bg-slate-100 p-4 rounded-lg overflow-x-auto border border-slate-200">
-                      <code className="text-slate-900 whitespace-pre-wrap">{markdown}</code>
+                      <code className="text-slate-900 whitespace-pre-wrap">
+                        {rawAIResponse
+                          ? JSON.stringify(rawAIResponse, null, 2)
+                          : "No AI response"}
+                      </code>
                     </pre>
                   )}
                 </div>
               ) : (
                 <div className="text-center py-12">
                   <FileText className="h-16 w-16 mx-auto mb-4 text-gray-300" />
-                  <p className="text-lg font-medium text-gray-600 mb-2">Generated UI will appear here</p>
+                  <p className="text-lg font-medium text-gray-600 mb-2">
+                    Generated UI will appear here
+                  </p>
                   <p className="text-sm text-gray-500">
-                    Enter your requirements and click "Generate UI" to get started
+                    Enter your requirements and click "Generate UI" to get
+                    started
                   </p>
                 </div>
               )}
