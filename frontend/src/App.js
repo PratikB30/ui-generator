@@ -5,7 +5,13 @@ import rehypeRaw from "rehype-raw";
 import { Button } from "./components/ui/button";
 import { Textarea } from "./components/ui/textarea";
 import { Input } from "./components/ui/input";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./components/ui/card";
 import { Alert, AlertDescription } from "./components/ui/alert";
 import { Upload, FileText, Sparkles, Loader2, AlertCircle } from "lucide-react";
 import "./App.css";
@@ -21,12 +27,12 @@ function App() {
       setError("Please enter a requirement before generating UI.");
       return;
     }
-    
+
     setLoading(true);
     setError("");
     try {
       const response = await fetch(
-        "http://localhost:5001/ui-generator-d7f03/us-central1/generateUI/generate-ui",
+        "https://us-central1-ui-generator-d7f03.cloudfunctions.net/generateUI/generate-ui",
         {
           method: "POST",
           headers: {
@@ -43,48 +49,51 @@ function App() {
       }
     } catch (err) {
       console.error("Backend connection error:", err);
-      setError("Failed to connect to backend. Please check if the Firebase Functions emulator is running on port 5001.");
+      setError(
+        "Failed to connect to backend. Please check if the Firebase Functions emulator is running on port 5001."
+      );
     }
     setLoading(false);
   };
 
   const extractPDFText = async (arrayBuffer) => {
     // @ts-ignore - pdfjsLib is loaded from CDN
-    const pdf = await window.pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+    const pdf = await window.pdfjsLib.getDocument({ data: arrayBuffer })
+      .promise;
     const textContent = [];
-    
+
     // Extract text from all pages
     for (let i = 1; i <= pdf.numPages; i++) {
       const page = await pdf.getPage(i);
       const content = await page.getTextContent();
-      
+
       let lastY = null;
       let textLine = [];
-      
+
       // Process each text item
       for (const item of content.items) {
         if (lastY !== item.transform[5]) {
           if (textLine.length > 0) {
-            textContent.push(textLine.join(' '));
+            textContent.push(textLine.join(" "));
             textLine = [];
           }
           lastY = item.transform[5];
         }
         textLine.push(item.str);
       }
-      
+
       // Add the last line
       if (textLine.length > 0) {
-        textContent.push(textLine.join(' '));
+        textContent.push(textLine.join(" "));
       }
-      
+
       // Add page break if not last page
       if (i < pdf.numPages) {
-        textContent.push('\n\n--- Page Break ---\n\n');
+        textContent.push("\n\n--- Page Break ---\n\n");
       }
     }
-    
-    return textContent.join('\n');
+
+    return textContent.join("\n");
   };
 
   const extractWordText = async (arrayBuffer) => {
@@ -96,8 +105,10 @@ function App() {
       }
       return result.value;
     } catch (err) {
-      console.error('Word document parsing error:', err);
-      throw new Error('Failed to parse Word document. Please ensure it\'s a valid .docx file.');
+      console.error("Word document parsing error:", err);
+      throw new Error(
+        "Failed to parse Word document. Please ensure it's a valid .docx file."
+      );
     }
   };
 
@@ -118,30 +129,37 @@ function App() {
       if (file.type === "application/pdf") {
         const arrayBuffer = await file.arrayBuffer();
         text = await extractPDFText(arrayBuffer);
-      } else if (file.type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document" || 
-                 file.name.toLowerCase().endsWith('.docx')) {
+      } else if (
+        file.type ===
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ||
+        file.name.toLowerCase().endsWith(".docx")
+      ) {
         const arrayBuffer = await file.arrayBuffer();
         text = await extractWordText(arrayBuffer);
-      } else if (file.type.startsWith('text/')) {
+      } else if (file.type.startsWith("text/")) {
         text = await file.text();
       } else {
-        throw new Error(`Unsupported file type: ${file.type}. Please upload a PDF, Word document (.docx), or text file.`);
+        throw new Error(
+          `Unsupported file type: ${file.type}. Please upload a PDF, Word document (.docx), or text file.`
+        );
       }
 
       // Clean up the extracted text
       text = text
-        .replace(/\s+/g, ' ')  // Replace multiple spaces with single space
-        .replace(/\n\s*\n/g, '\n\n')  // Replace multiple newlines with double newline
-        .trim();  // Remove leading/trailing whitespace
+        .replace(/\s+/g, " ") // Replace multiple spaces with single space
+        .replace(/\n\s*\n/g, "\n\n") // Replace multiple newlines with double newline
+        .trim(); // Remove leading/trailing whitespace
 
       if (!text.trim()) {
-        throw new Error("No text could be extracted from the file. Please ensure the file contains text content.");
+        throw new Error(
+          "No text could be extracted from the file. Please ensure the file contains text content."
+        );
       }
 
       setRequirement(text);
     } catch (err) {
       setError(`Failed to read file: ${err.message}`);
-      console.error('File reading error:', err);
+      console.error("File reading error:", err);
     } finally {
       setLoading(false);
     }
@@ -167,7 +185,8 @@ function App() {
             </h1>
           </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Transform your requirements into beautiful, functional UI components with the power of AI
+            Transform your requirements into beautiful, functional UI components
+            with the power of AI
           </p>
         </div>
 
@@ -180,7 +199,8 @@ function App() {
                 Requirements Input
               </CardTitle>
               <CardDescription>
-                Describe your UI requirements or upload a file (PDF, Word, or text) containing your specifications
+                Describe your UI requirements or upload a file (PDF, Word, or
+                text) containing your specifications
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -209,8 +229,8 @@ function App() {
               </div>
 
               <div className="flex gap-2 pt-4">
-                <Button 
-                  onClick={handleSubmit} 
+                <Button
+                  onClick={handleSubmit}
                   disabled={loading || !requirement.trim()}
                   className="flex-1"
                 >
@@ -226,8 +246,8 @@ function App() {
                     </>
                   )}
                 </Button>
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   onClick={clearAll}
                   disabled={!requirement && !markdown}
                 >
@@ -258,9 +278,9 @@ function App() {
             <CardContent>
               {markdown ? (
                 <div className="prose prose-sm max-w-none">
-                  <ReactMarkdown 
-                    children={markdown} 
-                    rehypePlugins={[rehypeRaw]} 
+                  <ReactMarkdown
+                    children={markdown}
+                    rehypePlugins={[rehypeRaw]}
                     remarkPlugins={[remarkGfm]}
                     className="prose-headings:text-foreground prose-p:text-muted-foreground prose-code:bg-muted prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-muted prose-pre:p-4"
                   />
@@ -269,7 +289,10 @@ function App() {
                 <div className="text-center py-12 text-muted-foreground">
                   <FileText className="h-12 w-12 mx-auto mb-4 opacity-50" />
                   <p>Generated UI will appear here</p>
-                  <p className="text-sm">Enter your requirements and click "Generate UI" to get started</p>
+                  <p className="text-sm">
+                    Enter your requirements and click "Generate UI" to get
+                    started
+                  </p>
                 </div>
               )}
             </CardContent>

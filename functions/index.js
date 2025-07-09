@@ -7,6 +7,17 @@ const app = express();
 app.use(cors({ origin: true }));
 app.use(express.json());
 
+app.use((req, res, next) => {
+  res.set("Access-Control-Allow-Origin", "*");
+  res.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.set("Access-Control-Allow-Headers", "Content-Type");
+  if (req.method === "OPTIONS") {
+    res.status(204).send("");
+  } else {
+    next();
+  }
+});
+
 const genAI = new GoogleGenerativeAI("AIzaSyCZTg7CnYJ6hxAdWS_VRDqagGUvjzIp7fk"); // Replace with your key
 
 async function generateUI(requirementText) {
