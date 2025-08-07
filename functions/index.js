@@ -18,7 +18,7 @@ app.use((req, res, next) => {
   }
 });
 
-const genAI = new GoogleGenerativeAI("AIzaSyCZTg7CnYJ6hxAdWS_VRDqagGUvjzIp7fk"); // Replace with your key
+const genAI = new GoogleGenerativeAI("  "); // Replace with your key
 
 async function generateUI(requirementText) {
   const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
